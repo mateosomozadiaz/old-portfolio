@@ -1,0 +1,11 @@
+.main {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	margin: auto;
+	max-width: var(--max-width);
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-11);
+	padding: 0 var(--side-padding);
+}

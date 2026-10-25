@@ -1,0 +1,31 @@
+.footer {
+	margin-top: var(--space-11);
+	border-top: 1px solid var(--border);
+}
+
+.container {
+	max-width: var(--max-width);
+	margin: auto;
+	padding: var(--space-8) var(--side-padding);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--space-4);
+}
+
+.p {
+	font-size: var(--text-sm);
+	color: var(--text-faint);
+}
+
+.backToTop {
+	font-size: var(--text-sm);
+	font-weight: var(--weight-semibold);
+	color: var(--text-dim);
+	transition: var(--transition-fast);
+}
+
+.backToTop:hover {
+	color: var(--text);
+}

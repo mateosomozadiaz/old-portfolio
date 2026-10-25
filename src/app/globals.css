@@ -1,0 +1,149 @@
+:root {
+	/* ---------- COLORS ---------- */
+	--background: hsl(0, 0%, 3%);
+	--text: hsl(0, 0%, 96%);
+	--text-dim: hsl(0, 0%, 66%);
+	--text-faint: hsl(0, 0%, 45%);
+	--primary: hsl(0, 0%, 96%);
+	--primary-shade: hsl(0, 0%, 80%);
+
+	/* Cards, inputs and other raised surfaces */
+	--surface: hsl(0 0% 100% / 0.04);
+	--surface-hover: hsl(0 0% 100% / 0.07);
+	--border: hsl(0 0% 100% / 0.1);
+	--border-strong: hsl(0 0% 100% / 0.22);
+
+	/* ---------- SPACING SCALE ---------- */
+	--space-1: 0.25rem;
+	--space-2: 0.5rem;
+	--space-3: 0.75rem;
+	--space-4: 1rem;
+	--space-5: 1.25rem;
+	--space-6: 1.5rem;
+	--space-7: 1.75rem;
+	--space-8: 2rem;
+	--space-9: 3rem;
+	--space-10: 4rem;
+	--space-11: 6rem;
+
+	--side-padding: 4.5rem;
+	--max-width: 1200px;
+	--navbar-height: 4.5rem;
+
+	/* ---------- TYPOGRAPHY ---------- */
+
+	--font-base: var(--font-source-sans), system-ui, sans-serif;
+	--font-heading: var(--font-inria-serif), Georgia, serif;
+
+	--text-xs: 0.75rem; /* 12px */
+	--text-sm: 0.875rem; /* 14px */
+	--text-base: 1rem; /* 16px */
+	--text-lg: 1.125rem; /* 18px */
+	--text-xl: 1.25rem; /* 20px */
+	--text-2xl: 1.5rem; /* 24px */
+	--text-section: clamp(2.25rem, 5vw, 3.25rem);
+
+	--weight-extralight: 200;
+	--weight-light: 300;
+	--weight-regular: 400;
+	--weight-medium: 500;
+	--weight-semibold: 600;
+	--weight-bold: 700;
+	--weight-extrabold: 800;
+	--weight-black: 900;
+
+	--leading-tight: 1.2;
+	--leading-normal: 1.5;
+	--leading-loose: 1.75;
+
+	/* ---------- RADIUS ---------- */
+	--radius-sm: 4px;
+	--radius-md: 8px;
+	--radius-card: 1.25rem;
+	--radius-lg: 100px;
+
+	/* ---------- TRANSITIONS ---------- */
+	--transition-fast: 150ms ease;
+	--transition-normal: 250ms ease;
+	--transition-slow: 400ms ease;
+}
+
+@media screen and (max-width: 950px) {
+	:root {
+		--side-padding: 2rem;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	:root {
+		--side-padding: 1.25rem;
+	}
+}
+
+html {
+	color-scheme: dark;
+	scroll-behavior: smooth;
+	scroll-padding-top: calc(var(--navbar-height) + var(--space-8));
+}
+
+body {
+	color: var(--text);
+	background: var(--background);
+	line-height: var(--leading-normal);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: var(--font-base);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+	border: none;
+	background: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+::selection {
+	background-color: var(--text);
+	color: var(--background);
+}
+
+:focus-visible {
+	outline: 2px solid var(--text);
+	outline-offset: 3px;
+}
+
+/* Soft light glow behind the top of the page */
+.backdrop {
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	pointer-events: none;
+	background:
+		radial-gradient(60rem 40rem at 85% -10%, hsl(0 0% 100% / 0.08), transparent 70%),
+		radial-gradient(50rem 35rem at -10% 30%, hsl(0 0% 100% / 0.04), transparent 70%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}

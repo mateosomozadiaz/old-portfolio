@@ -14,8 +14,7 @@ export default function HeroSection() {
 				to the interface.
 			</p>
 			<div className={styles.actions}>
-				<button className={styles.button}>View Resume</button>
-				<a href="#contact" className={styles.secondaryButton}>
+				<a href="#contact" className={styles.button}>
 					Get in touch
 				</a>
 			</div>

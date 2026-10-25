@@ -81,34 +81,20 @@
 	margin-top: var(--space-8);
 }
 
-.button,
-.secondaryButton {
+.button {
 	padding: var(--space-3) var(--space-7);
 	border-radius: var(--radius-lg);
 	font-size: var(--text-base);
 	font-weight: var(--weight-semibold);
-	transition: var(--transition-fast);
-}
-
-.button {
 	background-color: var(--primary);
 	color: var(--background);
+	transition: var(--transition-fast);
 }
 
 .button:hover {
 	background-color: var(--primary-shade);
 }
 
-.secondaryButton {
-	border: 1px solid var(--border-strong);
-}
-
-.secondaryButton:hover {
-	background-color: var(--surface-hover);
-	border-color: var(--text-dim);
-}
-
-.button:active,
-.secondaryButton:active {
+.button:active {
 	transform: scale(0.95);
 }
